@@ -1,6 +1,7 @@
 def dockeruser = "rmpco"
 def imagename = "ubuntu:16"
 def container = "apache2"
+def MY_PASSWORD = "SamsungR580"
 node {
    echo 'Building Apache Docker Image'
 
@@ -30,7 +31,7 @@ stage('Tag Docker Image'){
 
 stage('Docker Login and Push Image'){
     withCredentials([usernamePassword(credentialsId: 'docker-hub-credentials', passwordVariable: 'dockerpasswd', usernameVariable: 'dockeruser')]) {
-    powershell "docker login -u ${dockeruser} -p ${dockerpasswd}"
+    powershell "echo "$MY_PASSWORD" | docker login --username foo --password-stdin"
     }
     powershell "docker push ${dockeruser}/ubuntu:16.04"
     }
