@@ -49,7 +49,7 @@ public class AppTest extends TestCase{
 	}
 
 	@Test
-	void testSquare() {
+	public void testSquare() {
 		App test=new App();
 		int output=test.square(5);
 		assertEquals(25, output);
@@ -58,14 +58,14 @@ public class AppTest extends TestCase{
 	@Test
 	//@Disabled
 	@DisplayName("Compare strings")
-	void testCompString() {
+	public void testCompString() {
 		App test=new App();
 		int output=test.compString("string","string");
 		assertEquals(0, output);
 	}
 
 	@Test
-	void testCountA() {
+	public void testCountA() {
 		App test=new App();
 		int output=test.countA("até afuncionou.");
 		assertEquals(2, output);
