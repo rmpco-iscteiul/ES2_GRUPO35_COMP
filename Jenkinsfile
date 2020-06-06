@@ -1,6 +1,6 @@
 def dockeruser = "rmpco"
-def imagename = "ubuntu:16"
-def container = "apache2"
+def imagename = "java:7"
+def container = "java"
 def mypassword = "SamsungR580"
 node {
    echo 'Building Apache Docker Image'
