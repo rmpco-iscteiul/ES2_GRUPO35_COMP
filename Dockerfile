@@ -1,5 +1,5 @@
 # Source Image name
-from openjdk:7
+from openjdk
 # Mainter Name
 maintainer Amar Singh
 COPY ES2-0.0.1-SNAPSHOT.jar /usr/app/
