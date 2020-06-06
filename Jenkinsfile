@@ -26,7 +26,7 @@ stage ('Runing Container to test built Docker Image'){
     }
     
 stage('Tag Docker Image'){
-    powershell "docker tag ${imagename} ${env.dockeruser}/ubuntu:16.04"
+    powershell "docker tag ${imagename} ${env.dockeruser}/java:7"
     }
 
 stage('Docker Login and Push Image'){
