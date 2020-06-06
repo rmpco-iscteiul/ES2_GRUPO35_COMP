@@ -3,6 +3,7 @@ from openjdk:7
 # Mainter Name
 maintainer Amar Singh
 COPY .ES2-0.0.1-SNAPSHOT.jar /usr/app/
+WORKDIR /usr/app
 # Command to update and install Apache packages
 # open port 
 EXPOSE 80
