@@ -1,11 +1,4 @@
-# Source Image name
-from openjdk
-# Mainter Name
-maintainer Amar Singh
-COPY . /usr/app/
-WORKDIR /usr/app
-# Command to update and install Apache packages
-# open port 
-EXPOSE 80
-# Command to run Apache server in background
-CMD ["java", “-jar", “ES2-0.0.1-SNAPSHOT.jar"]
+FROM wordpress:5.4.1
+RUN mkdir -p /usr/share/man/man1
+RUN export DEBIAN_FRONTEND=noninteractive && apt-get -y update && apt-get install -y default-jre
+RUN ln -s /etc/apache2/mods-available/cgi.load /etc/apache2/mods-enabled/cgi.load
